@@ -64,13 +64,13 @@ public class ProductoController {
             productoService.delete(idProducto);
         } catch (IllegalArgumentException e) {
             titulo = "error"; // Captura la excepción de argumento inválido para el mensaje de "no existe"
-            detalle = "categoria.error01";
+            detalle = "producto.error01";
         } catch (IllegalStateException e) {
             titulo = "error"; // Captura la excepción de estado ilegal para el mensaje de "datos asociados"
-            detalle = "categoria.error02";
+            detalle = "producto.error02";
         } catch (Exception e) {
             titulo = "error"; // Captura cualquier otra excepción inesperada
-            detalle = "categoria.error03";
+            detalle = "producto.error03";
         }
 
         redirectAttributes.addFlashAttribute(
